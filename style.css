@@ -1,0 +1,75 @@
+body{
+    margin: 0;
+    padding: 0;
+    line-height: 1.5em;
+}
+
+.container{
+    background-color: red;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr  repeat(4, minmax(0,400px)) 1fr;
+    gap: 5px;
+    grid-template-rows: 84px 40px 1fr 1fr 80px 80px;
+    grid-template-areas: 
+        "header header header header header header"
+        "bi_header bi_header bi_header bi_header bi_header bi_header"
+        ". content content aside aside ."
+        ". other_content other_content other_content other_content ."
+        "footer footer footer footer footer footer"
+        "bi_footer bi_footer bi_footer bi_footer bi_footer bi_footer"
+    ;
+}
+
+.header{
+    background-color: rgb(0, 255, 55);
+    grid-area: header;
+}
+
+.bi_header{
+    background-color: rgb(0, 255, 55);
+    grid-area: bi_header;
+}
+
+.content{
+    background-color: rgb(0, 255, 55);
+    grid-area: content;
+}
+
+.other_content{
+    background-color: rgb(0, 255, 55);
+    grid-area: other_content;
+}
+
+.aside{
+    background-color: rgb(0, 255, 55);
+    grid-area: aside;
+}
+
+
+.footer{
+    background-color: rgb(0, 255, 55);
+    grid-area: footer;
+}
+
+.bi_footer{
+    background-color: rgb(0, 255, 55);
+    grid-area: bi_footer;
+}
+
+@media screen and (max-width: 650px){
+
+    .container{
+
+        grid-template-areas: 
+            "header header header header header header"
+            "bi_header bi_header bi_header bi_header bi_header bi_header"
+            "content content content content content content"
+            "aside aside aside aside aside aside"
+            "other_content other_content other_content other_content other_content other_content"
+            "footer footer footer footer footer footer"
+            "bi_footer bi_footer bi_footer bi_footer bi_footer bi_footer"
+        ;
+    }
+
+}
